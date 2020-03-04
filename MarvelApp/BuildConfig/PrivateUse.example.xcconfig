@@ -1,0 +1,12 @@
+//
+//  PrivateUse.xcconfig
+//  MarvelApp
+//
+//  Created by Artur Stepaniuk on 28/02/2020.
+//  Copyright © 2020 Artur Stepaniuk. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+MARVEL_API_KEY = YOUR_MARVEL_API_KEY_SECRET
