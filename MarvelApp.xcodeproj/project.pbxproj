@@ -117,6 +117,7 @@
 		AAE1897E23FEBA8B00640463 /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
 		C86822BEDF84CE6EA71D12A4 /* Pods_MarvelApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarvelApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB3A5E8811F92A027DD1C717 /* Pods_MarvelAppTestsV2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarvelAppTestsV2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFB662A324CA524C00B17118 /* AppSecrets.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSecrets.generated.swift; sourceTree = "<group>"; };
 		F27BF351D7946F961D6325F7 /* Pods-MarvelAppTestsV2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelAppTestsV2.release.xcconfig"; path = "Target Support Files/Pods-MarvelAppTestsV2/Pods-MarvelAppTestsV2.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -401,12 +402,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AA5A52ED23F56A3100E945FA /* Build configuration list for PBXNativeTarget "MarvelApp" */;
 			buildPhases = (
+				AA21442D24093F1800A6ADD6 /* ShellScript */,
 				2DA0E37452B14D66C00B9E06 /* [CP] Check Pods Manifest.lock */,
 				AA5A52D223F56A2F00E945FA /* Sources */,
 				AA5A52D323F56A2F00E945FA /* Frameworks */,
 				AA5A52D423F56A2F00E945FA /* Resources */,
 				C9D6A9D605DB4DD7884AE6A7 /* [CP] Embed Pods Frameworks */,
-				AA21442D24093F1800A6ADD6 /* ShellScript */,
 			);
 			buildRules = (
 			);
