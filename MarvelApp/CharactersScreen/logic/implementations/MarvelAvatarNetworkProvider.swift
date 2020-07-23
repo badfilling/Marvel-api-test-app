@@ -33,6 +33,7 @@ class MarvelAvatarNetworkProvider: MarvelAvatarProvider {
                 DispatchQueue.main.async {
                     view.image = image
                 }
+                task.cancel()
             } else {
                 task.resume()
             }
