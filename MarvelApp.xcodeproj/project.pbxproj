@@ -25,7 +25,6 @@
 		AA2144242409267E00A6ADD6 /* MessagesRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2144232409267E00A6ADD6 /* MessagesRepositoryMock.swift */; };
 		AA214426240930EA00A6ADD6 /* ChatMessageCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA214425240930EA00A6ADD6 /* ChatMessageCellTests.swift */; };
 		AA21442F24093FF700A6ADD6 /* AppSecrets.stencil in Resources */ = {isa = PBXBuildFile; fileRef = AA21442E24093FF600A6ADD6 /* AppSecrets.stencil */; };
-		AA2144372409494300A6ADD6 /* AppSecrets.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2144362409494300A6ADD6 /* AppSecrets.generated.swift */; };
 		AA5A52DA23F56A2F00E945FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5A52D923F56A2F00E945FA /* AppDelegate.swift */; };
 		AA5A52DC23F56A2F00E945FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5A52DB23F56A2F00E945FA /* SceneDelegate.swift */; };
 		AA5A52E423F56A2F00E945FA /* Marvel_test_example_app.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AA5A52E223F56A2F00E945FA /* Marvel_test_example_app.xcdatamodeld */; };
@@ -50,6 +49,7 @@
 		AAE1897223FE8CBA00640463 /* CharacterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE1897023FE8CBA00640463 /* CharacterListViewModel.swift */; };
 		AAE1897323FE8CBA00640463 /* MarvelCharacterCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE1897123FE8CBA00640463 /* MarvelCharacterCellViewModel.swift */; };
 		AAE1897F23FEBA8B00640463 /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE1897E23FEBA8B00640463 /* ChatMessage.swift */; };
+		DFB662A424CA524C00B17118 /* AppSecrets.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB662A324CA524C00B17118 /* AppSecrets.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,7 +87,6 @@
 		AA2144282409387500A6ADD6 /* PrivateUse.example.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = PrivateUse.example.xcconfig; sourceTree = "<group>"; };
 		AA214429240938D100A6ADD6 /* PrivateUse.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = PrivateUse.xcconfig; sourceTree = "<group>"; };
 		AA21442E24093FF600A6ADD6 /* AppSecrets.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AppSecrets.stencil; sourceTree = "<group>"; };
-		AA2144362409494300A6ADD6 /* AppSecrets.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSecrets.generated.swift; sourceTree = "<group>"; };
 		AA5A52D623F56A2F00E945FA /* MarvelApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA5A52D923F56A2F00E945FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA5A52DB23F56A2F00E945FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -222,7 +221,7 @@
 		AA21442A24093BE900A6ADD6 /* Security */ = {
 			isa = PBXGroup;
 			children = (
-				AA2144362409494300A6ADD6 /* AppSecrets.generated.swift */,
+				DFB662A324CA524C00B17118 /* AppSecrets.generated.swift */,
 				AA21442E24093FF600A6ADD6 /* AppSecrets.stencil */,
 			);
 			path = Security;
@@ -589,7 +588,7 @@
 			files = (
 				AAE1897F23FEBA8B00640463 /* ChatMessage.swift in Sources */,
 				AA8E7D6D23FC22320024E36E /* MarvelAvatarProvider.swift in Sources */,
-				AA2144372409494300A6ADD6 /* AppSecrets.generated.swift in Sources */,
+				DFB662A424CA524C00B17118 /* AppSecrets.generated.swift in Sources */,
 				AA113E86240004AA00E72CEC /* CoreDataMessagesRepository.swift in Sources */,
 				AA8E7D6723FC1E410024E36E /* CharacterThumbnailDto.swift in Sources */,
 				AABFB42823FC41FA00FEC869 /* CharacterListViewController.swift in Sources */,
