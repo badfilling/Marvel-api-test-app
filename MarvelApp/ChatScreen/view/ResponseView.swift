@@ -12,9 +12,9 @@ class ResponseView: UIView {
     
     //to vm
     var responses = [
-        "Angry kookaburras have invided our city! PLEASE SAVE US!",
-        "You're a hero so you should help other people - give me some money pls :]",
-        "I want to become as strong as you! What should i eat for breakfast?"
+        "Angry kookaburras attack!",
+        "Enjoy the summer :]",
+        "Uffff"
     ]
     
     var responseHandler: ((String) -> Void)?
@@ -25,41 +25,21 @@ class ResponseView: UIView {
     }
     
     func setupViews() {
-        
-        let scrollView = prepareScrollView()
-        
         let buttons = prepareButtons()
-        
-        var scrollContentSize = CGSize(width: .zero, height: bounds.height)
+        let buttonStack = UIStackView()
+        buttonStack.axis = .vertical
+        buttonStack.distribution = .fillProportionally
+        buttonStack.spacing = 5
+        buttonStack.alignment = .fill
         for button in buttons {
-            button.translatesAutoresizingMaskIntoConstraints = false
-            scrollView.addSubview(button)
-            
-            let buttonWidth = totalWidth(for: button)
-            scrollContentSize.width += buttonWidth
-
-            let previousView = scrollView.subviews.last { $0 != button && $0 is UIButton } ?? scrollView
-            button.snp.makeConstraints { make in
-                make.leading.equalTo(previousView.snp.trailing).offset(4)
-                make.width.equalTo(buttonWidth)
-                make.height.equalTo(bounds.height)
-                make.centerY.equalToSuperview()
-            }
-            
+            buttonStack.addArrangedSubview(button)
         }
         
-        scrollView.contentSize = scrollContentSize
-    }
-    
-    private func prepareScrollView() -> UIScrollView {
-        let scrollView = UIScrollView(frame: .zero)
-        self.addSubview(scrollView)
-        scrollView.backgroundColor = .white
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+        buttonStack.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(buttonStack)
+        buttonStack.snp.makeConstraints { make in
+            make.edges.equalToSuperview().inset(4)
         }
-        return scrollView
     }
     
     private func prepareButtons() -> [UIButton] {
@@ -79,14 +59,7 @@ class ResponseView: UIView {
         return buttons
     }
     
-    private func totalWidth(for button: UIButton) -> CGFloat {
-        let insetsWidth = button.titleEdgeInsets.left + button.titleEdgeInsets.right
-        let titleWidth = ceil((button.titleLabel?.sizeThatFits(CGSize(width: CGFloat.greatestFiniteMagnitude, height: 0)) ?? .zero).width)
-        return insetsWidth + titleWidth
-    }
-    
     @objc func responseTapped(sender: UIButton) {
         responseHandler?(sender.titleLabel!.text!)
     }
-    
 }

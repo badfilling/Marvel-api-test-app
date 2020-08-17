@@ -33,6 +33,7 @@ class CharacterChatViewController: UIViewController {
         title = viewModel.characterName
 
         tableView.separatorStyle = .none
+        tableView.allowsSelection = false
         tableView.dataSource = self
         tableView.register(ChatMessageCell.self, forCellReuseIdentifier: ChatMessageCell.description())
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -58,7 +59,7 @@ class CharacterChatViewController: UIViewController {
             make.leading.equalTo(view.snp.leading)
             make.trailing.equalTo(view.snp.trailing)
             make.top.equalTo(tableView.snp.bottom).offset(4)
-            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
+            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-4)
             make.height.equalTo(100)
         }
         
