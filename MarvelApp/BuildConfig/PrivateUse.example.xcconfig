@@ -9,4 +9,5 @@
 // Configuration settings file format documentation can be found at:
 // https://help.apple.com/xcode/#/dev745c5c974
 
-MARVEL_API_KEY = YOUR_MARVEL_API_KEY_SECRET
+MARVEL_API_KEY_PUBLIC = YOUR_PUBLIC_KEY
+MARVEL_API_KEY_PRIVATE = YOUR_PRIVATE_KEY

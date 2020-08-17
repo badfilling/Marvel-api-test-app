@@ -7,7 +7,7 @@ DEPENDENCIES:
   - Sourcery
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - SnapKit
     - Sourcery
 
@@ -17,4 +17,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: aa7c19efe918e6582703fd290506c8454dc5267e
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.9.3

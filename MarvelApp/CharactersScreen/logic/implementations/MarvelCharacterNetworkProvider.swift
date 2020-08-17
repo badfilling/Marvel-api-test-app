@@ -19,8 +19,8 @@ class MarvelCharacterNetworkProvider: MarvelCharacterProvider {
         
         components.queryItems = [
             URLQueryItem(name: "apikey", value: AppSecrets.marvelApiKey),
-            URLQueryItem(name: "ts", value: "mytimestamp"),
-            URLQueryItem(name: "hash", value: "7279e3f3faedb0393db2a40ef923ccec")
+            URLQueryItem(name: "ts", value: AppSecrets.timestamp),
+            URLQueryItem(name: "hash", value: AppSecrets.hash)
         ]
         
         return components
@@ -34,7 +34,8 @@ class MarvelCharacterNetworkProvider: MarvelCharacterProvider {
             URLQueryItem(name: "limit", value: "\(maxBatchSize)")
         ])
         
-        let task = URLSession.shared.dataTask(with: urlComponents.url!) { data, _, error in
+        let task = URLSession.shared.dataTask(with: urlComponents.url!) { data, response, error in
+            print(response?.description)
             if let error = error {
                 completionHandler(.failure(.network(error.localizedDescription)))
                 return

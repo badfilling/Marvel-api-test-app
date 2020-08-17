@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -406,8 +406,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AA5A52ED23F56A3100E945FA /* Build configuration list for PBXNativeTarget "MarvelApp" */;
 			buildPhases = (
-				AA21442D24093F1800A6ADD6 /* ShellScript */,
 				2DA0E37452B14D66C00B9E06 /* [CP] Check Pods Manifest.lock */,
+				AA21442D24093F1800A6ADD6 /* ShellScript */,
 				AA5A52D223F56A2F00E945FA /* Sources */,
 				AA5A52D323F56A2F00E945FA /* Frameworks */,
 				AA5A52D423F56A2F00E945FA /* Resources */,
@@ -560,7 +560,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n$PODS_ROOT/Sourcery/bin/sourcery --sources $SRCROOT/MarvelApp/common --templates $SRCROOT/MarvelApp/Security/AppSecrets.stencil --output $SRCROOT/MarvelApp/Security/ --args marvelApiKey=$MARVEL_API_KEY_SECRET\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n$PODS_ROOT/Sourcery/bin/sourcery --sources $SRCROOT/MarvelApp/common --templates $SRCROOT/MarvelApp/Security/AppSecrets.stencil --output $SRCROOT/MarvelApp/Security/ --args marvelApiKey=$MARVEL_API_KEY_PUBLIC,marvelPrivateKey=$MARVEL_API_KEY_PRIVATE\n";
 		};
 		C9D6A9D605DB4DD7884AE6A7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -568,20 +568,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MarvelApp/Pods-MarvelApp-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-MarvelApp/Pods-MarvelApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-MarvelApp/Pods-MarvelApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MarvelApp/Pods-MarvelApp-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MarvelApp/Pods-MarvelApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -815,7 +810,7 @@
 		};
 		AA5A534923F5964C00E945FA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C96A1ADA13A49C9515BCBBE5 /* Pods-MarvelAppTestsV2.debug.xcconfig */;
+			baseConfigurationReference = 18C6B345106B43117B489F8B /* Pods-MarvelAppTestsV2.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -836,7 +831,7 @@
 		};
 		AA5A534A23F5964C00E945FA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4097497DA53F19BECD476F5D /* Pods-MarvelAppTestsV2.release.xcconfig */;
+			baseConfigurationReference = F27BF351D7946F961D6325F7 /* Pods-MarvelAppTestsV2.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
