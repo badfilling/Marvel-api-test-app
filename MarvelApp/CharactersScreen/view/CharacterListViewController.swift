@@ -40,10 +40,18 @@ class CharacterListViewController: UIViewController {
         viewModel.loadCharacters(at: viewModel.defaultIndexesToLoad)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let selectionIndexPath = self.tableView.indexPathForSelectedRow {
+            self.tableView.deselectRow(at: selectionIndexPath, animated: animated)
+        }
+    }
+    
     private func setupView() {
         title = "Marvel characters"
         
         tableView.dataSource = self
+        tableView.separatorStyle = .none
         tableView.prefetchDataSource = self
         tableView.estimatedRowHeight = MarvelCharacterCell.estimatedRowHeight
         tableView.rowHeight = UITableView.automaticDimension

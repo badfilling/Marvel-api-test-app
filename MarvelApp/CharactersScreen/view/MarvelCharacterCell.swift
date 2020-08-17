@@ -13,6 +13,8 @@ class MarvelCharacterCell: UITableViewCell {
     
     let avatarView: UIImageView = {
         let view = UIImageView()
+        view.layer.cornerRadius = 4
+        view.clipsToBounds = true
         return view
     }()
     
