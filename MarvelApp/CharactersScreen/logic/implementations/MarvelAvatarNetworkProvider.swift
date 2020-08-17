@@ -15,13 +15,10 @@ class MarvelAvatarNetworkProvider: MarvelAvatarProvider {
             return nil
         }
         
-        let cache = URLCache.shared
         let request = URLRequest(url: imageURL)
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             if let data = data, let response = response, let image = UIImage(data: data) {
-                let cachedData = CachedURLResponse(response: response, data: data)
-                cache.storeCachedResponse(cachedData, for: request)
                 DispatchQueue.main.async {
                     view.image = image
                 }
