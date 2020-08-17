@@ -26,7 +26,7 @@ class MarvelAvatarNetworkProvider: MarvelAvatarProvider {
         }
         
         DispatchQueue.global(qos: .userInitiated).async {
-            if let data = cache.cachedResponse(for: request)?.data, let image = UIImage(data: data) {
+            if let data = URLCache.shared.cachedResponse(for: request)?.data, let image = UIImage(data: data) {
                 DispatchQueue.main.async {
                     view.image = image
                 }
