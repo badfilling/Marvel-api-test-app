@@ -25,6 +25,7 @@ class ResponseView: UIView {
     }
     
     func setupViews() {
+        backgroundColor = .systemBackground
         let buttons = prepareButtons()
         let buttonStack = UIStackView()
         buttonStack.axis = .vertical

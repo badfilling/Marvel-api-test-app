@@ -58,8 +58,8 @@ class CharacterChatViewController: UIViewController {
         responseView.snp.makeConstraints { make in
             make.leading.equalTo(view.snp.leading)
             make.trailing.equalTo(view.snp.trailing)
-            make.top.equalTo(tableView.snp.bottom).offset(4)
-            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-4)
+            make.top.equalTo(tableView.snp.bottom)
+            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
             make.height.equalTo(100)
         }
         
