@@ -1,0 +1,13 @@
+//
+//  PrivateUse.release.xcconfig
+//  MarvelApp
+//
+//  Created by Artur Stepaniuk on 19/08/2020.
+//  Copyright © 2020 Artur Stepaniuk. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+#include "Pods/Target Support Files/Pods-MarvelApp/Pods-MarvelApp.release.xcconfig"
+MARVEL_API_KEY_PUBLIC = zxc
+MARVEL_API_KEY_PRIVATE = zxc
